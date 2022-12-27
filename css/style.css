@@ -371,7 +371,7 @@ ul {
   font-size: 16px;
   font-weight: 600;
   line-height: 40px;
-  color: var(--te3xt-blacck-900);
+  color: var(--text-black-900);
   text-transform: capitalize;
 }
 .skills .skill-item .progress {
@@ -393,7 +393,7 @@ ul {
   position: absolute;
   top: -40px;
   left: 0;
-  color: var(--te3xt-blacck-900);
+  color: var(--text-black-900);
   font-weight: 400;
   line-height: 40px;
 }
