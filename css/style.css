@@ -698,6 +698,7 @@ ul {
   }
   .section {
     right: 0;
+    padding-bottom: 100px;
   }
   /* .section.open {
     right: 270px;
@@ -705,6 +706,10 @@ ul {
   .personal-info .info-item p span {
     display: block;
     margin-right: 0;
+  }
+  .about .timeline-box:last-child,
+  .portfolio .portfolio-item:last-child {
+    margin-bottom: 60px;
   }
 }
 /*midum*/
