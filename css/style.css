@@ -91,6 +91,9 @@ ul {
   border-left: 1px solid var(--bg-black-50);
   transition: all 0.3s ease;
 }
+.overlay{
+  display: none;
+}
 .logo {
   width: 100px;
   position: fixed;
@@ -683,12 +686,22 @@ ul {
   .aside .nav-toggler.open {
     right: 290px;
   }
+  .aside.open + #overlay{
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      display: block;
+      z-index: 80;
+  }
   .section {
     right: 0;
   }
-  .section.open {
+  /* .section.open {
     right: 270px;
-  }
+  } */
   .personal-info .info-item p span {
     display: block;
     margin-right: 0;

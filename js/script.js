@@ -87,6 +87,10 @@ function openAside(){
         allSection[i].classList.toggle("open")        
     }
 }
+document.getElementById("overlay").addEventListener("click",function(){
+    aside.classList.remove("open")
+    togglerBtn.classList.remove("open")
+})
 
 // view degree
 let view = document.querySelectorAll(".view");
