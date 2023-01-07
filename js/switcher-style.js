@@ -1,3 +1,7 @@
+// get localStorage
+document.body.classList.add(localStorage.getItem("moode"))
+document.querySelector(`[title="${localStorage.getItem('themColor')}"]`).removeAttribute("disabled")
+
 // toggler style switvher open class
 let sttingIcon= document.querySelector(".style-switcher-toggler");
 sttingIcon.addEventListener("click", ()=>{
@@ -7,7 +11,7 @@ sttingIcon.addEventListener("click", ()=>{
 // hide style-switcher on scroll
 window.addEventListener("scroll",()=>{
 
-    if(    document.querySelector(".style-switcher").classList.contains("open")){
+    if(document.querySelector(".style-switcher").classList.contains("open")){
 
     document.querySelector(".style-switcher").classList.remove("open")
 
@@ -20,10 +24,10 @@ function setActiveStyle(color){
     colorsCssLinks.forEach(style => {
         if(color === style.getAttribute("title")){
             style.removeAttribute("disabled")
+            localStorage.setItem("themColor",style.getAttribute("title"))
         }
         else{
             style.setAttribute("disabled","true")
-            
         }
     });
 }
@@ -40,9 +44,11 @@ dayNight.addEventListener('click',()=>{
     document.body.classList.toggle("dark")
     if(document.body.classList.contains("dark")){
         logo.setAttribute("src","img/logo-2.PNG")
+        localStorage.setItem("moode","dark")
     }
     else{
         logo.setAttribute("src","img/logo.png")
+        localStorage.removeItem("moode")
     }
 })
 
