@@ -1,6 +1,9 @@
 // get localStorage
 document.body.classList.add(localStorage.getItem("moode"))
-document.querySelector(`[title="${localStorage.getItem('themColor')}"]`).removeAttribute("disabled")
+let them = localStorage.getItem('themColor');
+if(localStorage.getItem('themColor') !== null){
+    document.querySelector(`[title="${localStorage.getItem('themColor')}"]`).removeAttribute("disabled")
+}
 
 // toggler style switvher open class
 let sttingIcon= document.querySelector(".style-switcher-toggler");
